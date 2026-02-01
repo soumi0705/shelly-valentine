@@ -31,11 +31,11 @@ const App = () => {
   }
 
   return (
-    <div className="w-screen min-h-dvh flex flex-wrap items-center justify-center bg-lighter-pink px-2 py-4 gap-3">
+    <div className="w-full min-h-dvh flex flex-col items-center justify-center bg-lighter-pink px-2 py-4 gap-3">
       <div
         className={`${
           successYes ? "hidden" : ""
-        } relative bg-light-pink border border-purple shadow-lg p-6 rounded-lg indie-flower-regular tracking-wide text-lg font-semibold h-fit overflow-hidden`}
+        } w-full max-w-[550px] mx-auto relative bg-light-pink border border-purple shadow-lg p-6 rounded-lg indie-flower-regular tracking-wide text-lg font-semibold h-fit overflow-hidden`}
       >
         <div className="absolute z-0 w-40 h-40 -bottom-4 -right-9 opacity-40 -rotate-[30deg]">
           <img src={flowerPink} alt="Flower Pink" />
@@ -65,8 +65,8 @@ const App = () => {
         </div>
       </div>
       {!successYes ? (
-        <div className="w-full bg-light-pink border border-purple shadow-lg p-6 rounded-lg relative overflow-hidden">
-          <div className="absolute z-0 w-14 h-14 top-16 right-6 opacity-40 rotate-[64deg]">
+        <div className="w-full max-w-[550px] mx-auto bg-light-pink border border-purple shadow-lg p-6 rounded-lg relative overflow-hidden">
+          <div className="absolute z-0 w-14 h-14 top-16 left-72 sm:left-96 opacity-40 rotate-[64deg]">
             <img src={kiss} alt="kiss" />
           </div>
           <div>
@@ -96,7 +96,7 @@ const App = () => {
           </div>
         </div>
       ) : (
-        <div className="bg-light-pink border border-purple shadow-lg p-6 rounded-lg">
+        <div className="w-full max-w-[550px] mx-auto bg-light-pink border border-purple shadow-lg p-6 rounded-lg">
           <h3 className="playpen-sans text-xl text-purple text-center font-bold tracking-wide">
             Yay! You said YES!
           </h3>

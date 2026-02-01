@@ -1,8 +1,10 @@
-export enum ImageChange {
-  hearts = "Hearts",
-  milkandmochalove = "Milk&Mocha",
-  sad = "Sad",
-}
+export const ImageChange = {
+  hearts: "Hearts",
+  milkandmochalove: "Milk&Mocha",
+  sad: "Sad",
+} as const;
+export type ImageChange = (typeof ImageChange)[keyof typeof ImageChange];
+
 export const images = [
   {
     name: "Hearts",
